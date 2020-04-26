@@ -7,8 +7,8 @@ var burger = {
     });
   },
 
-  insertOne: function (name, status, bb) {
-    orm.insertOne("burgers", name, status, bb, function (res) {
+  insertOne: function (name, bb) {
+    orm.insertOne("burgers", name, "false", bb, function (res) {
       bb(res);
     });
   },
