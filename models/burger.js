@@ -8,13 +8,13 @@ var burger = {
   },
 
   insertOne: function (name, bb) {
-    orm.insertOne("burgers", name, "false", bb, function (res) {
+    orm.insertOne("burgers", name, 1, bb, function (res) {
       bb(res);
     });
   },
 
-  updateOne: function (ID, column, value, bb) {
-    orm.updateOne("burgers", ID, column, value, bb, function (res) {
+  updateOne: function (ID, value, bb) {
+    orm.updateOne("burgers", ID, "devoured", value, bb, function (res) {
       bb(res);
     });
   },

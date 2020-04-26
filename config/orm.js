@@ -1,4 +1,4 @@
-connection = require("connection.js");
+connection = require("../config/connection");
 
 var orm = {
   selectAll: function (table, bb) {

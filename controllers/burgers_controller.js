@@ -8,24 +8,23 @@ router.get("/", function (req, res) {
       burgers: data,
     };
     console.log(burgObject);
-    res.render("filename", burgObject);
+    res.render("index", burgObject);
   });
 });
 
 router.post("/api/burgers", function (req, res) {
   var n = req.body.name;
   burger.insertOne(n, function (result) {
-    res.json(result);
+    res.json({ id: result.insertID });
   });
 });
 
 router.put("/api/burgers/:id", function (req, res) {
-  var condition = req.params.id;
-  var col = req.body.col;
-  var val = req.body.val;
-  console.log("condition", condition);
+  var id = req.params.id;
+  var val = req.body.newDevouredState;
+  console.log("id", id);
 
-  burger.updateOne(condition, col, val, function (result) {
+  burger.updateOne(id, val, function (result) {
     if (result.changedRows === 0) {
       return res.status(404).end();
     } else {
