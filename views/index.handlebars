@@ -1,32 +1,60 @@
-<h1>Burger-Me Restaurant App</h1>
+<img src="assets/img/artur-tumasjan-fr7u8i4sLp8-unsplash.jpg" class="img-fluid" alt="Responsive image">
+<div class="jumbotron jumbotron-fluid bg-warning">
+    <div class="container text-center">
+        <h1 class="display-3">Burger App</h1>
+        <p class="lead">Track your restaurant's burger orders! </p>
+        <p class="lead">Input customer orders and see what orders
+            are being prepared.</p>
+        </p>
+        <p class="lead"> Click 'Devoured!' after the burger is served!</p>
 
-<h2>Burgers Comin' Up</h2>
+    </div>
+</div>
 
-<ul>
-    {{#each burgers}}
-    {{#if devoured}}
-    {{> burger-block devoured=0}}
-    {{/if}}
-    {{/each}}
-</ul>
 
-<h2>Burgers Devoured</h2>
+<div class="card card-fluid m-5 text-center">
+    <div class="card-header display-4 bg-warning">
+        Burgers Comin' Up
+    </div>
+    <ul class="list-group list-group-flush">
+        {{#each burgers}}
+        {{#if devoured}}
+        {{> burger-block devoured=0}}
+        {{/if}}
+        {{/each}}
+    </ul>
+</div>
 
-<ul>
-    {{#each burgers}}
-    {{#unless devoured}}
-    {{> burger-block devoured=1}}
-    {{/unless}}
-    {{/each}}
-</ul>
 
-<h2>Add An Order</h2>
-<form class="create-form">
+<div class="card card-fluid m-5 text-center">
+    <div class="card-header display-4 bg-warning">
+        Devoured!
+    </div>
+    <ul class="list-group list-group-flush">
 
-    <div class="form-group">
-        <label for="burg">Burger Name:</label>
-        <input type="text" id="burg" name="name">
+        {{#each burgers}}
+        {{#unless devoured}}
+        {{> burger-block devoured=1}}
+        {{/unless}}
+        {{/each}}
+    </ul>
+</div>
+
+<div class="card card-fluid m-5 text-center">
+    <div class="card-header display-4 bg-warning">
+        Add an Order
     </div>
 
-    <button type="submit">Add Order</button>
-</form>
+    <form class="create-form">
+
+        <div class="form-group">
+            <br>
+            <label for="burg">Burger Name:</label>
+            <input class="form-control" type="text" id="burg" name="name">
+            <br>
+
+            <button type="submit" class="btn btn-danger">Add Order</button>
+        </div>
+    </form>
+
+</div>
