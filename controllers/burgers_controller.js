@@ -8,7 +8,7 @@ router.get("/", function (req, res) {
       burgers: data,
     };
     console.log(burgObject);
-    res.render("index", burgObject);
+    res.render("../views/index.handlebars", burgObject);
   });
 });
 
