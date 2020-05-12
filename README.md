@@ -25,7 +25,7 @@ This app helps track burger orders. Orders can be added the the 'Burgers Comin' 
 ## Authors
 
 - **Kate Jamboretz** - _Initial work_ - [katejamboretz](https://github.com/katejamboretz)
-- **UCB Extension Full Stack Program** - _provide assignment objective, overall purpose of app and visual design ideas, match questions and repository/file layout_
+- **UCB Extension Full Stack Program** - _provide assignment objective, overall purpose of app and repository/file layout_
 
 ## Acknowledgments
 
